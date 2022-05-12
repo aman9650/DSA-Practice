@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        // COUNTING OCCURENCES-> how many times a number is occur in series
+        // if i didve a number by 10 we can get last digit of Number
+        // n%10=last digit
+        int n = in.nextInt();
+        int count=0;
+        while(n>0){
+            int rem=n%10; //it check if reminder(lat digit )
+            if (rem == 3){
+                count++; // it increase count if last digit is 3
+            }
+            n=n/10; //(it removes the last digit from number)
+        }
+        System.out.println(count);
+        
+        
+        
+        }
+}
