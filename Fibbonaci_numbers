@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        
+        //FIBBBONACI NUMBER -> next number will be sum of previous two numbers
+        // e.g-> 0,1,1,2,3,5,8,13......
+        
+        //code to find n th FIBBBONACI number 
+        int n = in.nextInt();
+        int p =0;
+        int i=1;
+        int count=2;
+        while(count<=n){
+           int temp =i;
+           i = i+p;
+           p= temp;
+           count++;
+           
+        }
+        System.out.println(i);
+        
+        
+        
+        }
+}
