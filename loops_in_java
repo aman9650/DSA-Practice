@@ -1,0 +1,60 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        
+        // For loop=> we know how many times will loop run
+        /* Syntax:
+        for(initialization; condition ; increment/decrement){
+            //body
+        }*/
+        
+        
+        
+        
+       /* for(int i=1;i<10;i= i+2){
+            System.out.println(i);
+        }
+        //print number from 1 to i
+        System.out.println("Enter the number n :");
+        int n=in.nextInt();
+        for (int j=1;j<=n;j=j+1){
+            System.out.println(j);
+        }*/
+        
+        
+        
+        
+        
+        /*while loop->// we don't know how many times loop will run
+            Syntex:
+            while(condition){
+            //body
+        }
+        */
+        
+        
+        
+      /*  int num=1;
+        while(num<=10){
+            System.out.println(num);
+            num=num+1;
+        }
+        */
+        
+        
+        //D0 WHILE LOOP=>it first print then checks condition that means it will always print once wthere condition is true or false
+        /*Syntax:
+        do {
+            
+        }while (condition);
+        */
+        
+        int n=1:
+        do {
+            System.out.println(n);
+            n++;
+        }while(n<=5)
+        
+}
+}
