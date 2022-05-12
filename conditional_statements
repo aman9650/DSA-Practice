@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the given salary : ");
+        int salary=input.nextInt();
+        /* Syntex of if:
+        if(boolean conditipn T or F){
+            //body
+        }
+        else if ( boolean condition ){
+            //do this
+        }
+        else
+        {
+            //do this 
+            
+        }*/
+        if(salary<=20000){
+            salary=salary+1000;
+            System.out.println("Final ammount ="+salary);
+        }
+        else if(salary>20000 && salary<30000){
+            salary=salary+2000;
+            System.out.println("Fianl amount ="+salary);
+        }
+        else{
+            salary=salary+3000;
+            System.out.println("Final amount="+salary);
+        }
+}
+}
