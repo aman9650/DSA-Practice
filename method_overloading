@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main{
+    static int x=90;// this will bve shadowed at line 9
+    public static void main(String[] args){
+        Scanner in= new Scanner(System.in);
+        // Function overloading(function with same name but different parameters{no. of parameters different or argument })
+        
+        fun(67);
+        fun("aman");
+        
+    }
+    static void fun(int a){
+        System.out.println(a);
+        
+    }
+    static void fun(String name){
+        System.out.println(name);
+        
+    }
+        
+        
+        
+        
+        
+        
+    
+}
