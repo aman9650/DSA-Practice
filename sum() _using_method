@@ -7,6 +7,8 @@ public class Main{
        // OR 
        
        sum2();
+       
+       greet();
     }
         // We use function and method to use this code again and again
         /*//Syntax
@@ -43,6 +45,13 @@ public class Main{
              
             
         }
+        // return string statement
+        static String greet(){  //we can only return string in this method 
+    
+        String greeting="how are you";
+        return greeting;
+        
+    }
         
     
 }
