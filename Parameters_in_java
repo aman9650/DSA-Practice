@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner in= new Scanner(System.in);
+       String personalised =mygreet("Aman Gautam");
+       System.out.println(personalised);
+       
+       String ans=greet();
+       System.out.println(ans);
+    }
+    // pass the value of numbers when you are calling the method in main()
+    // we can do that yusing parameter
+    
+  /*  static int sum3(int a,int b){
+        int sum=a +b;
+        return sum;
+    }
+    */
+    
+    
+    static String mygreet(String name){
+        String message="Hello " +name;
+        return message;
+    }
+    
+    static String greet(){
+        String greeting = "how are you";
+        return greeting;
+    }
+        
+    
+}
