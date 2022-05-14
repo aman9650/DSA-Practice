@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main{
+    public static void main(String[] args){
+        Scanner in= new Scanner(System.in);
+        int a=10; // initisalised
+        int b=20;
+        //we can't acces num over here(Scoping)
+    }
+    
+    static void random(){
+        int num=67;
+        System.out.println(num);
+    }
+        //Block scope
+    {
+      /*  a=100; //already initisalised outside the block in the same methid, hence you can't initialise again*/
+        a=100;
+        System.out.println(a);// but we can change the value
+        int c=1234;//can't use outside the block
+        
+    }
+ /*   System.out.println(c); // we can't print c outside that block */
+ 
+ 
+ 
+}
