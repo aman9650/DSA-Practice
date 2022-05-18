@@ -1,1 +1,28 @@
+//non-primitive /*which can be broken down e.g-Arrys,Strings ,etc.*/
+// non primitive
+/* e.g-int,char,boolean,float ,etc
+
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner in=new Scanner(System.in);
+	    
+	    int[] arr=new int[5];
+	    //input using arrays
+	    for(int i=0;i<arr.length;i++){
+	        arr[i] =in.nextInt();
+	         
+	    }
+	     for(int i=0;i<arr.length;i++){
+	       System.out.print(arr[i]+" ");
+	         
+	    }
+	   
+	}
+	
+		
+	
+}
 
