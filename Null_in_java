@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner in=new Scanner(System.in);
+	    int[] ros=new int[5];
+	    String[] arr=new String[4];// we can't create null
+	    String str=null;// only assign to non-primitive
+	    // int b=null // gives error
+	    // null is used as a default
+	    
+	    
+	    System.out.println(arr[0]);
+	}
+	
+		
+	
+}
