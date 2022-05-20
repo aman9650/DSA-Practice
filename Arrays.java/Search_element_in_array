@@ -1,0 +1,40 @@
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.ArrayList;
+public class Main{
+    public static void main(String[] args){
+        Scanner in =new Scanner(System.in);
+        System.out.print("Enter the number of elements in array you want to create : ");
+        int arrsize=in.nextInt();
+        
+        
+      // search an array 
+      // add element in array at specific index
+      
+      int[] arr=new int[arrsize];
+      for(int i=0;i<arrsize;i++){
+          arr[i]=in.nextInt();
+      }
+      System.out.print("Enter the element you want to find : ");
+      int key=in.nextInt();
+      search(arr,arrsize,key);
+      
+    }
+      
+      static void search(int[] arr , int arrsize,int key){
+          
+          for(int i =0;i<arrsize;i++){
+              if(arr[i]==key){
+                  System.out.println("array found at index : "+i);
+              }
+              
+    
+              
+          }
+          
+          
+      }
+      
+      
+    
+}
