@@ -4,6 +4,15 @@ public class Main{
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
         
+         
+        /* //array is already sorted
+            //first step - find middle elements
+            //second step - check if target element is greater or smaller then middle element 
+            //third step - if element is smaller search in left side otherwise search in right side
+            // fourth step - of target is greater then right side element will be taken as new arrayand 
+            and find middle elemnts and same process goes in right side
+        */
+        
         
         System.out.print("Enter the size of array you want to create: ");
         int size=in.nextInt();
