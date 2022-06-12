@@ -1,0 +1,16 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main
+{
+	public static void main(String[] args) {
+	pattern2(4);
+	}
+	static void pattern2(int n){
+	   for(int row=0;row<=n;row++){
+	       for(int col=n-row-1;col>=0;col--){
+	           System.out.print("*");
+	       }
+	       System.out.println();
+	   }
+	}
+}
