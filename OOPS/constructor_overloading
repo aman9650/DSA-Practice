@@ -1,0 +1,68 @@
+
+public class Main
+{
+	public static void main(String[] args) {
+		int[] rno=new int[5];
+		String[] names=new String[5];
+		float[] marks=new float[5];
+		Student[] students=new Student[5];
+		
+		Student kunal= new Student(112,"kunal kushawaha",12);// when object is creater go inside constructor Student()
+		
+		Student rahul =new Student(); // in this case Student() cunstructor use rahul in placd of this.
+		kunal.greeting();
+		rahul.greeting();
+		
+		
+			System.out.println("*******Random******* ");
+		Student random=new Student(kunal);
+		System.out.println(random.name);
+	/*	System.out.println(kunal.name);
+		System.out.println(kunal.rno);
+		System.out.println(kunal.marks);*/
+	}
+	//CREATE A CLASS FOR EVERY STUDENT 
+	static class Student{
+	    int rno;
+	    String name;
+	   float marks;
+	   
+	   
+	   
+	   //CONSTRUCTOR ->
+	   
+	   //we need a way to add the values of the above properties of Object
+	   
+	   // we need one word to access every Object
+	   
+	   void greeting(){
+	       System.out.println("My name is "+ this.name);
+	   }
+	   void changename(String newName){
+	       this.name =newName;
+	   }
+	   
+	   //CONSTRUCTOR taking values from another constructor
+	   Student(Student other){
+	       this.name=other.name; //OTHER WILL REPLACE WITH KUNAL AND THIS WILL REPLACE WITH RANDOM
+	       this.rno=other.rno;
+	       this.marks=this.marks;
+	   }
+	   
+	   
+	   
+	   Student(){
+	    this.rno=13; // this will replace with object->kunal(IMP)
+		this.name="rahul";
+		this.marks=88f; 
+	   }
+	   
+	   //Student arpit = new Student(17."Arpit,89.4f");
+	   //here , this will replace with arpit
+	    Student(int rno,String name,float marks){
+	    this.rno=rno;// we have to assing as the name is funtion 
+		this.name=name;
+		this.marks=marks; 
+	   }
+	}
+}
