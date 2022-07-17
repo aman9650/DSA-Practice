@@ -1,0 +1,47 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
+public class stack {
+    /**
+     * @param args
+     */
+    public static void main(String[] args){
+      /*   Stack<Integer> stack=new Stack();
+        stack.push(34);
+        stack.push(23);
+        stack.push(23);
+        stack.push(11);
+
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.print(stack.pop());
+        */
+
+
+      /*  Queue<Integer> queue=new LinkedList<Integer>();
+        queue.add(6);
+        queue.add(5);
+        queue.add(13);
+        queue.add(22);
+        System.out.println(queue.remove());
+        */
+
+        Deque<Integer> dequeue=new ArrayDeque<>();
+        
+        dequeue.addFirst(12);
+        dequeue.addFirst(13);
+        dequeue.addFirst(14);
+        dequeue.addLast(15);
+        
+        System.out.println(dequeue.removeFirst());
+        System.out.println(dequeue.removeFirst());
+        System.out.println(dequeue.removeFirst());
+
+        
+    }
+    
+}
