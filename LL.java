@@ -2,6 +2,7 @@ package Data_Structures;
 
 
 
+
 public class LL {
    
     Node head;
@@ -27,7 +28,7 @@ public class LL {
         if(head==null){ //if linkedlist doesn't exist or head is null
             head=newNode;  // adding new node to head
             return;
-
+  
         }
         newNode.next=head; //if a linkedlist is already exist then add head to next or pointer
         head=newNode; // now head becomes new node
@@ -104,6 +105,31 @@ public class LL {
     }
 
 
+    public void reverseIterate(){
+        if(head==null || head.next== null){
+            
+            return;
+        }
+
+        Node prevNode=head;
+        Node currNode=head.next;
+       
+
+        while(currNode!=null){
+            Node nextNode=currNode.next;
+            currNode.next=prevNode;
+
+            //update
+            prevNode=currNode;
+            currNode=nextNode;
+
+        }
+        head.next=null;
+        head=prevNode;
+
+
+    }
+
 
     public static void main(String[] args) {
 
@@ -119,6 +145,8 @@ public class LL {
         list.addFirst("Aman");
         System.out.println(list.getSize());
         list.printList();
+
+        list.reverseIterate();
         
 
 
