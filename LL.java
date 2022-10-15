@@ -48,7 +48,7 @@ public class LL {
         while(currNode.next!=null){ //we used loop until next or pointer become null for last pointer
             currNode=currNode.next;
         }
-        currNode.next=null;
+        currNode.next=newNode;
     }
 
 
