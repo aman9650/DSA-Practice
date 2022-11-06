@@ -93,7 +93,7 @@ public class Main {
 
     
 
-
+    //reverse iterate
     public void reverseIterate(){
         if(head==null || head.next== null){
             
@@ -118,6 +118,8 @@ public class Main {
 
 
     }
+    
+    //size of linked list
     public int size(){
         Node curr=head;
         int count=0;
@@ -126,8 +128,37 @@ public class Main {
             
             curr=curr.next;
         }
-        System.out.print(count);
+        System.out.println(count);
         return count;
+    }
+
+
+    //insert at any position
+    public void InsertPos(int data,int index){
+        Node newNode=new Node(data);
+        
+        if(index==0){
+            addFirst(data);
+        }
+        else if (index >=size()){
+            addLast(data);
+        }
+        else{
+            Node curr=head.next;
+            Node prev=head;
+            int currIndex=1; // because 0 is already checked
+            
+            while(curr!=null){
+                if(currIndex==index){
+                    newNode.next=curr;
+                    prev.next=newNode;
+                    break;
+                }
+                prev=curr;
+                curr=curr.next;
+                currIndex++;
+            }
+        }
     }
 
 
@@ -144,6 +175,8 @@ public class Main {
         list.addLast(11);
         list.printList();
         list.size();
+        list.InsertPos(12,13);
+        list.printList();
         
     }
 }
