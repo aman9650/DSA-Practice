@@ -1,28 +1,19 @@
-package Data_Structures;
-
-
-
-
-public class LL {
+public class Main {
    
     Node head;
-    private  int size;
-    LL(){
-        this.size=0;
-    }
     
     class Node{
-        String data; //data to be stored
+        int data; //data to be stored
         Node next; //pointer or next node
 
-        Node(String data){ //constructor
+        Node(int data){ //constructor
             this.data=data;
             this.next=null;
-            size++;
+            
         }
     }
     //add operation- first
-    public void addFirst(String data){
+    public void addFirst(int data){
         Node newNode=new Node(data);
         
         if(head==null){ //if linkedlist doesn't exist or head is null
@@ -35,7 +26,7 @@ public class LL {
     }
      //add operation-Last
 
-    public void addLast(String data){
+    public void addLast(int data){
         Node newNode=new Node(data);
         
         if(head==null){ //if linkedlist doesn't exist or head is null
@@ -72,7 +63,7 @@ public class LL {
             System.out.println("List id empty");
             return;
         }
-        size--;
+        
         head=head.next; //if list is not empty then head will become next i.e second node and first will auromatically delete
     }
 
@@ -83,7 +74,7 @@ public class LL {
             return;
         }
 
-        size--;
+        
         // if head.next is already null or list has only one node
         if(head.next==null){
             head=null;
@@ -100,9 +91,7 @@ public class LL {
 
     }
 
-    public int getSize(){
-        return size;
-    }
+    
 
 
     public void reverseIterate(){
@@ -129,29 +118,32 @@ public class LL {
 
 
     }
+    public int size(){
+        Node curr=head;
+        int count=0;
+        while(curr!=null){
+            count++;
+            
+            curr=curr.next;
+        }
+        System.out.print(count);
+        return count;
+    }
 
 
     public static void main(String[] args) {
 
-        LL list=new LL();
-        list.addFirst("a");
-        list.addFirst("is");
-
+        Main list=new Main();
+        list.addFirst(12);
         list.printList();
-        list.delFirst();
+        list.addLast(10);
+        list.addFirst(13);
+        list.addFirst(2);
+        list.addFirst(1);
+        list.addLast(122);
+        list.addLast(11);
         list.printList();
-        System.out.println(list.getSize());
-
-        list.addFirst("Aman");
-        System.out.println(list.getSize());
-        list.printList();
-
-        list.reverseIterate();
-        
-
-
-
-
+        list.size();
         
     }
 }
