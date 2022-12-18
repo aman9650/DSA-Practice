@@ -1,0 +1,188 @@
+public class Main {
+   
+    Node head;
+    Node tail;
+    
+    class Node{
+        int data; //data to be stored
+        Node next; //pointer or next node
+
+        Node(int data){ //constructor
+            this.data=data;
+            this.next=null;
+            
+            
+        }
+    }
+    //add operation- first
+    public void addFirst(int data){
+        Node newNode=new Node(data);
+        
+        if(head==null){ //if linkedlist doesn't exist or head is null
+            head=newNode;  // adding new node to head
+            tail=newNode;
+            newNode.next=head;
+            return;
+  
+        }
+        newNode.next=head; //if a linkedlist is already exist then add head to next or pointer
+        head=newNode; // now head becomes new node
+        tail.next=head;
+    }
+     //add operation-Last
+
+    public void addLast(int data){
+        Node newNode=new Node(data);
+        
+        if(head==null){ //if linkedlist doesn't exist or head is null
+            head=newNode;  // adding new node to head
+            return;
+
+        }
+
+        Node currNode=head;
+        while(currNode.next!=null){ //we used loop until next or pointer become null for last pointer
+            currNode=currNode.next;
+        }
+        currNode.next=newNode;
+    }
+
+
+    //Print 
+    
+    public void printList(){
+        if(head == null){
+            System.out.println("List is empty");
+            return;
+        }
+        Node currNode=head;
+        while(currNode!=head){ 
+            System.out.print(currNode.data +"->");//we used loop until next or pointer become null for last pointer
+            currNode=currNode.next;
+        }
+        System.out.println("NULL");
+
+    }
+    //Delete First
+    public void delFirst(){
+        if(head==null){  //if list is empty
+            System.out.println("List id empty");
+            return;
+        }
+        
+        head=head.next; //if list is not empty then head will become next i.e second node and first will auromatically delete
+    }
+
+    //delete last
+    public void delLast(){
+        if(head==null){  //if list is empty
+            System.out.println("List id empty");
+            return;
+        }
+
+        
+        // if head.next is already null or list has only one node
+        if(head.next==null){
+            head=null;
+            return;
+        }
+
+        Node secondLast=head; // starts from head
+        Node lastNode=head.next;// starts from second node
+        while(lastNode.next!=null){ // this loop for lastNode  will run from second node to last node
+            lastNode=lastNode.next;
+            secondLast=secondLast.next; // this loop for SecondNode  will run from Head to Second last node
+        }
+        secondLast.next=null;
+
+    }
+
+    
+
+    //reverse iterate
+    public void reverseIterate(){
+        if(head==null || head.next== null){
+            
+            return;
+        }
+
+        Node prevNode=head;
+        Node currNode=head.next;
+       
+
+        while(currNode!=null){
+            Node nextNode=currNode.next;
+            currNode.next=prevNode;
+
+            //update
+            prevNode=currNode;
+            currNode=nextNode;
+
+        }
+        head.next=null;
+        head=prevNode;
+
+
+    }
+    
+    //size of linked list
+    public int size(){
+        Node curr=head;
+        int count=0;
+        while(curr!=null){
+            count++;
+            
+            curr=curr.next;
+        }
+        System.out.println(count);
+        return count;
+    }
+
+
+    //insert at any position
+    public void InsertPos(int data,int index){
+        Node newNode=new Node(data);
+        
+        if(index==0){
+            addFirst(data);
+        }
+        else if (index >=size()){
+            addLast(data);
+        }
+        else{
+            Node curr=head.next;
+            Node prev=head;
+            int currIndex=1; // because 0 is already checked
+            
+            while(curr!=null){
+                if(currIndex==index){
+                    newNode.next=curr;
+                    prev.next=newNode;
+                    break;
+                }
+                prev=curr;
+                curr=curr.next;
+                currIndex++;
+            }
+        }
+    }
+
+
+    public static void main(String[] args) {
+
+        Main list=new Main();
+        list.addFirst(12);
+        list.printList();
+        list.addLast(10);
+        list.addFirst(13);
+        list.addFirst(2);
+        list.addFirst(1);
+        list.addLast(122);
+        list.addLast(11);
+        list.printList();
+        list.size();
+        list.InsertPos(12,13);
+        list.printList();
+        
+    }
+}
